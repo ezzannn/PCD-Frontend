@@ -1,7 +1,6 @@
 Frontend : Gestion des rémunérations d’un circuit de distribution
 =====================================
 Ce projet constitue la partie frontend du projet gestion des rémunérations d'un circuit de distribution.
-Les technologies utilisées dans ce projet sont : Play 2 framework - java - scala - HTML5 - CSS - Javascript - JQuery -Bootstrap - Json - 
-Jackson - PlayWS - Floobits - IntelliJ IDEA - Netty.
-Modéle de conception : MVC 2
+Les technologies utilisées dans ce projet sont : Play 2 framework - java - scala - HTML5 - CSS - Javascript -Bootstrap - Json - IntelliJ IDEA
+Modéle de conception : MVC 
 

@@ -1,0 +1,35 @@
+@(cddForm: play.data.Form[models.ChefDepartementDirect], messages : List[String])
+    @main("connexion") {
+        <br/>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Chef Departement Direct</h2>
+            </div>
+        </div>
+        <div class="container padding-top-10">
+            <div class="jumbotron">
+                <form class="register form-horizontal" action="@routes.Application.traitement_cdd()" method="POST">
+                    <label for="login">
+                        Login <span style="color: #c00">*</span>
+                        <br/>
+                        <input type="text" class="form-control" name="login" placeholder="login" value="@cddForm.field("login").valueOr("")" />
+                        &nbsp <FONT COLOR="#FF0000">@messages(0) @messages(1) </font>
+                    </label>
+
+                    <br/>
+                    <br/>
+                    <label for="passwd">
+                        Password <span style="color: #c00">*</span>
+                        <br/>
+                        <input type="password" class="form-control" name="passwd" placeholder="password" value="@cddForm.field("passwd").valueOr("")" />
+                        &nbsp <FONT COLOR="#FF0000">@messages(3) @messages(2) </font>
+                    </label>
+
+                    <br/>
+                    <br/>
+                    <button class="btn btn-default" type="submit">Connecter</button>
+                </form>
+            </div>
+        </div>
+    }
+

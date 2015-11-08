@@ -1,0 +1,63 @@
+@(user : String)
+    @main("acceuil") {
+        <br/>
+        <div class="container">
+            <div class="jumbotron">
+            @if(user.equals("dc")) {
+                    <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                    <a href="/objectifDc" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                    <a href="http://localhost:9001/rapport" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                    <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                }else {
+                    @if(user.equals("cdd")) {
+                        <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                        <a href="/objectifCdd" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                        <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                        <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                    }else{
+                        @if(user.equals("cdi")) {
+                            <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                            <a href="/objectifCdi" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                            <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                            <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                        }else{
+                            @if(user.equals("csp")) {
+                                <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                                <a href="/objectifCsp" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                                <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                                <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                            }else{
+                                @if(user.equals("csd")) {
+                                    <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                                    <a href="/objectifCsd" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                                    <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                                    <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                                }else{
+                                    @if(user.startsWith("rgb")) {
+                                    <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                                    <a href="/objectifRrb" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                                    <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                                    <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                                    }else{
+                                        @if(user.startsWith("rgp")) {
+                                            <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                                            <a href="/objectifRrp" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                                            <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                                            <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                                        }else{
+                                            @if(user.startsWith("rgd")) {
+                                                <a href="#" class="btn btn-block btn-primary"><h3>Fixer Pondération</h3></a>
+                                                <a href="/objectifRrd" class="btn btn-block btn-info"><h3>Fixer Les Objectifs</h3></a>
+                                                <a href="#" class="btn btn-block btn-primary"><h3>Visualiser Le Rapport</h3></a>
+                                                <a href="/deconnexion" class="btn btn-block btn-info"><h3>Déconnexion</h3></a>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            </div>
+        </div>
+    }

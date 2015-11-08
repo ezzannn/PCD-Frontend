@@ -1,0 +1,51 @@
+@(produits : List[models.Produit], messages : List[String], boutiques : List[models.Boutique], franchises : List[models.Franchise])
+@main("objectifs") {
+    <br/>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Responsable Regional Boutique</h2>
+        </div>
+    </div>
+    <div class="container padding-top-10">
+        <div class="jumbotron">
+            <form class="register form-horizontal" action="@routes.Application.objectif_rrb()" method="POST">
+                <label for="produit">
+                    produit :
+                    <br/>
+                    <select name="produit" class="form-control">
+                    @for(produit <- produits){
+                        <option value="@produit.id"> @(produit.`type`) </option>
+                    }
+                    </select>&nbsp<font COLOR="#FF0000"> @messages(0) </font>
+                </label>
+                <br/>
+                <br/>
+                <label for="cible">
+                    cible :
+                    <br/>
+                    <select name="cible" class="form-control">
+                        @for(boutique <- boutiques){
+                            <option value="@boutique.id"> @boutique.nom </option>
+                        }
+                        @for(franchise <- franchises){
+                            <option value="@franchise.id"> @franchise.nom </option>
+                        }
+                    </select>&nbsp<font COLOR="#FF0000"> @messages(1) </font>
+                </label>
+                <br/>
+                <br/>
+                <label for="objectif">
+                    Objectif :
+                    <br/>
+                    <input type="text" class="form-control" name="objectif" placeholder="objectif" value="" />&nbsp<font COLOR="#FF0000"> @messages(2) </font>
+                </label>
+                <br/>
+                <br/>
+                <button class="btn btn-default" type="submit">envoyer</button>
+                <br/>
+                <br/>
+                <font COLOR="#FF0000"> @messages(3) </font>
+            </form>
+        </div>
+    </div>
+}

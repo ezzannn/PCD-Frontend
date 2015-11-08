@@ -1,0 +1,50 @@
+@(produits : List[models.Produit], messages : List[String])
+@main("objectifs") {
+    <br/>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Chef Service Distribution</h2>
+        </div>
+    </div>
+    <div class="container padding-top-10">
+        <div class="jumbotron">
+            <form class="register form-horizontal" action="@routes.Application.objectif_csd()" method="POST">
+                <label for="produit">
+                    produit :
+                    <br/>
+                    <select name="produit" class="form-control">
+                    @for(produit <- produits){
+                        <option value="@produit.id"> @(produit.`type`) </option>
+                    }
+                    </select>&nbsp<font COLOR="#FF0000"> @messages(0) </font>
+                </label>
+                <br/>
+                <br/>
+                <label for="cible">
+                    cible :
+                    <br/>
+                    <select name="cible" class="form-control">
+                        <option value="rgd1" selected>responsable régional distribution zone nord 1</option>
+                        <option value="rgd2">responsable régional distribution zone nord 2</option>
+                        <option value="rgd3">responsable régional distribution zone nord 3</option>
+                        <option value="rgd4">responsable régional distribution zone centre</option>
+                        <option value="rgd5">responsable régional distribution zone sud</option>
+                    </select>&nbsp<font COLOR="#FF0000"> @messages(1) </font>
+                </label>
+                <br/>
+                <br/>
+                <label for="objectif">
+                    Objectif :
+                    <br/>
+                    <input type="text" class="form-control" name="objectif" placeholder="objectif" value="" />&nbsp<font COLOR="#FF0000"> @messages(2) </font>
+                </label>
+                <br/>
+                <br/>
+                <button class="btn btn-default" type="submit">envoyer</button>
+                <br/>
+                <br/>
+                <font COLOR="#FF0000"> @messages(3) </font>
+            </form>
+        </div>
+    </div>
+}
